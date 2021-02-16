@@ -13,8 +13,8 @@
 		3D6CF8D625DB85E600877E47 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CF8D525DB85E600877E47 /* CarCell.swift */; };
 		3D6CF8DB25DB867C00877E47 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CF8DA25DB867C00877E47 /* EmptyView.swift */; };
 		3D77744C25DB63AC0095A681 /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D77744B25DB63AC0095A681 /* ErrorAlertView.swift */; };
+		3DB9B84025DC5D9C0017239D /* CarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB9B83F25DC5D9C0017239D /* CarListView.swift */; };
 		3DD3B17E25D4BB8100EEBEDD /* Dillon_MurphyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B17D25D4BB8100EEBEDD /* Dillon_MurphyApp.swift */; };
-		3DD3B18025D4BB8100EEBEDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B17F25D4BB8100EEBEDD /* ContentView.swift */; };
 		3DD3B18225D4BB8100EEBEDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD3B18125D4BB8100EEBEDD /* Assets.xcassets */; };
 		3DD3B18525D4BB8100EEBEDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD3B18425D4BB8100EEBEDD /* Preview Assets.xcassets */; };
 		3DD3B19025D4BB8100EEBEDD /* Dillon_MurphyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B18F25D4BB8100EEBEDD /* Dillon_MurphyTests.swift */; };
@@ -54,9 +54,9 @@
 		3D6CF8D525DB85E600877E47 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		3D6CF8DA25DB867C00877E47 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		3D77744B25DB63AC0095A681 /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
+		3DB9B83F25DC5D9C0017239D /* CarListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListView.swift; sourceTree = "<group>"; };
 		3DD3B17A25D4BB8100EEBEDD /* Dillon_Murphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dillon_Murphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD3B17D25D4BB8100EEBEDD /* Dillon_MurphyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dillon_MurphyApp.swift; sourceTree = "<group>"; };
-		3DD3B17F25D4BB8100EEBEDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3DD3B18125D4BB8100EEBEDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DD3B18425D4BB8100EEBEDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3DD3B18625D4BB8100EEBEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				3DD3B17D25D4BB8100EEBEDD /* Dillon_MurphyApp.swift */,
-				3DD3B17F25D4BB8100EEBEDD /* ContentView.swift */,
+				3DB9B83F25DC5D9C0017239D /* CarListView.swift */,
 				3DD3B1AB25D4BBCA00EEBEDD /* Car.swift */,
 				3D6CF8D525DB85E600877E47 /* CarCell.swift */,
 				3D6CF8DA25DB867C00877E47 /* EmptyView.swift */,
@@ -453,10 +453,10 @@
 				3D77744C25DB63AC0095A681 /* ErrorAlertView.swift in Sources */,
 				3DD3B1C625D4C4AE00EEBEDD /* FetchCars.swift in Sources */,
 				3D6CF8DB25DB867C00877E47 /* EmptyView.swift in Sources */,
-				3DD3B18025D4BB8100EEBEDD /* ContentView.swift in Sources */,
 				3D6CF8D625DB85E600877E47 /* CarCell.swift in Sources */,
 				3D6CF8C525DB806200877E47 /* ViewControllerResolver.swift in Sources */,
 				3DD3B17E25D4BB8100EEBEDD /* Dillon_MurphyApp.swift in Sources */,
+				3DB9B84025DC5D9C0017239D /* CarListView.swift in Sources */,
 				3DD3B1AC25D4BBCA00EEBEDD /* Car.swift in Sources */,
 				3D6CF8C625DB806200877E47 /* SearchBar.swift in Sources */,
 				3DD3B1B925D4BF8F00EEBEDD /* RemoteImage.swift in Sources */,

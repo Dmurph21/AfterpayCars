@@ -17,7 +17,7 @@ class SearchBar: NSObject, ObservableObject {
         super.init()
         self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.searchResultsUpdater = self
-        self.searchController.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search By Make, Model, Body, Or Year", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        self.searchController.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search By Make, Model, Body, Or Year", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont(name: "Menlo", size: 13.0)!])
     }
 }
 

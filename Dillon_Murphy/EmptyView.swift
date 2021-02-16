@@ -10,11 +10,11 @@ import SwiftUI
 /// Car List Empty View.
 ///
 /// - Properties
-///     -  contentView: The `ContentView` that contains the`EmptyView`.
+///     -  carListView: The `CarListView` that contains the`EmptyView`.
 ///
 struct EmptyView: View {
     
-    var contentView: ContentView
+    var carListView: CarListView
     
     var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: -25) {
@@ -37,8 +37,8 @@ struct EmptyView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    self.contentView.fetch.endpointType = .normal
-                    //self.contentView.fetch.forceFetch()
+                    self.carListView.fetch.endpointType = .normal
+                    //self.carListView.fetch.forceFetch()
                 }) {
                     Image(systemName: "arrow.counterclockwise")
                 }
@@ -49,6 +49,6 @@ struct EmptyView: View {
 
 struct EmptyView_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyView(contentView: ContentView())
+        EmptyView(carListView: CarListView())
     }
 }

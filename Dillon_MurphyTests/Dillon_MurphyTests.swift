@@ -10,12 +10,12 @@ import XCTest
 
 class Dillon_MurphyTests: XCTestCase {
     
-    var sut: ContentView!
+    var sut: CarListView!
     var carList: [Car] = [Car]()
 
     override func setUpWithError() throws {
         super.setUp()
-        sut = ContentView()
+        sut = CarListView()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 

@@ -11,21 +11,34 @@ import SwiftUI
 ///
 /// - Properties
 ///     -  car: The `Car` to display in the `CarCell`.
+///     -  textSize: CGFloat value representing the size of the font.
 ///
 struct CarCell: View {
     
     var car: Car
     
+    var textSize: CGFloat {
+        let screenSize = UIScreen.main.bounds.size
+        switch screenSize.width {
+        case 414,428: return 19
+        default: return 17
+        }
+    }
+    
     var body: some View {
         HStack(spacing: 0) {
             RemoteImage(url: car.imageString)
+                .frame(width: 160.0, height: 120.0)
+                .aspectRatio(contentMode: .fill)
+                .border(Color.black)
             VStack(alignment: .leading, spacing: 0) {
                 Text(car.yearMakeModel)
                     .underline()
-                    .font(.headline)
+                    .font(Font.custom("Menlo", size: textSize))
                     .fontWeight(.semibold)
-                    .padding([.leading, .top], 5)
-                Spacer()
+                    .minimumScaleFactor(0.5)
+                    .frame(maxHeight: 32)
+                    .padding([.leading, .trailing, .top], 5)
                 CarInfoView(car: car)
             }
             .frame(maxWidth: .infinity)
@@ -40,6 +53,7 @@ struct CarCell: View {
 ///
 /// - Properties
 ///     -  car: The `Car` to display in the `CarInfoView`.
+///     -  textSize: CGFloat value representing the size of the font.
 ///
 struct CarInfoView: View {
     
@@ -49,48 +63,90 @@ struct CarInfoView: View {
         VStack(spacing: 0){
             HStack(alignment: .center, spacing: 0) {
                 VStack(alignment: .leading) {
-                    Text("Price:").alignmentGuide(.leading) { d in d[.trailing] }.padding([.leading], 5)
+                    Text("Price:")
+                        .alignmentGuide(.leading) { d in d[.trailing] }
+                        .padding([.leading], 5)
+                        .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
                 }
                 Spacer()
-                Text("$\(car.price)").padding([.trailing], 5)
+                Text("$\(car.price)")
+                    .padding([.trailing], 5)
+                    .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
             }.background(Color.init(white: 0.9, opacity: 0.8))
             HStack(alignment: .center, spacing: 0) {
                 VStack(alignment: .leading) {
-                    Text("Body:").alignmentGuide(.leading) { d in d[.trailing] }.padding([.leading], 5)
+                    Text("Body:")
+                        .alignmentGuide(.leading) { d in d[.trailing] }
+                        .padding([.leading], 5)
+                        .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
                 }
                 Spacer()
-                Text("\(car.configuration.body)").padding([.trailing], 5)
+                Text("\(car.configuration.body)")
+                    .padding([.trailing], 5)
+                    .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
             }
             if let cylinders = car.configuration.cylinders, let horsepower = car.configuration.horsepower {
                 HStack(alignment: .center, spacing: 0) {
                     VStack(alignment: .leading) {
-                        Text("Cylinders:").alignmentGuide(.leading) { d in d[.trailing] }.padding([.leading], 5)
+                        Text("Cylinders:")
+                            .alignmentGuide(.leading) { d in d[.trailing] }
+                            .padding([.leading], 5)
+                            .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
                     }
                     Spacer()
-                    Text("\(cylinders)").padding([.trailing], 5)
+                    Text("\(cylinders)")
+                        .padding([.trailing], 5)
+                        .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
                 }.background(Color.init(white: 0.9, opacity: 0.8))
                 HStack(alignment: .center, spacing: 0) {
                     VStack(alignment: .leading) {
-                        Text("Horsepower:").alignmentGuide(.leading) { d in d[.trailing] }.padding([.leading], 5)
+                        Text("Horsepower:")
+                            .alignmentGuide(.leading) { d in d[.trailing] }
+                            .padding([.leading], 5)
+                            .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
                     }
                     Spacer()
-                    Text("\(horsepower)").padding([.trailing], 5)
+                    Text("\(horsepower)")
+                        .padding([.trailing], 5)
+                        .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
                 }
             } else if let cylinders = car.configuration.cylinders {
                 HStack(alignment: .center, spacing: 0) {
                     VStack(alignment: .leading) {
-                        Text("Cylinders:").alignmentGuide(.leading) { d in d[.trailing] }.padding([.leading], 5)
+                        Text("Cylinders:")
+                            .alignmentGuide(.leading) { d in d[.trailing] }
+                            .padding([.leading], 5)
+                            .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
                     }
                     Spacer()
-                    Text("\(cylinders)").padding([.trailing], 5)
+                    Text("\(cylinders)")
+                        .padding([.trailing], 5)
+                        .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
                 }.background(Color.init(white: 0.9, opacity: 0.8))
             } else if let horsepower = car.configuration.horsepower {
                 HStack(alignment: .center, spacing: 0) {
                     VStack(alignment: .leading) {
-                        Text("Horsepower:").alignmentGuide(.leading) { d in d[.trailing] }.padding([.leading], 5)
+                        Text("Horsepower:")
+                            .alignmentGuide(.leading) { d in d[.trailing] }
+                            .padding([.leading], 5)
+                            .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
                     }
                     Spacer()
-                    Text("\(horsepower)").padding([.trailing], 5)
+                    Text("\(horsepower)")
+                        .padding([.trailing], 5)
+                        .font(Font.custom("Menlo", size: 17))
+                        .frame(maxHeight: 20)
                 }.background(Color.init(white: 0.9, opacity: 0.8))
             }
             Spacer()

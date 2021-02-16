@@ -12,13 +12,13 @@ import SwiftUI
 ///
 /// - Properties
 ///     -  error: The `Error` to be displayed in the`ErrorAlertView`.
-///     -  contentView: The `ContentView` that contains the`ErrorAlertView`.
+///     -  carListView: The `CarListView` that contains the`ErrorAlertView`.
 ///
 struct ErrorAlertView: View {
     
     var error: Error
     
-    var contentView: ContentView
+    var carListView: CarListView
     
     var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: -25) {
@@ -45,8 +45,8 @@ struct ErrorAlertView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    //self.contentView.fetch.endpointType = .normal
-                    self.contentView.fetch.forceFetch()
+                    //self.carListView.fetch.endpointType = .normal
+                    self.carListView.fetch.forceFetch()
                 }) {
                     Image(systemName: "arrow.counterclockwise")
                 }

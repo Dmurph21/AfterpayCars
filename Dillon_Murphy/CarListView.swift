@@ -1,26 +1,42 @@
 //
-//  ContentView.swift
+//  CarListView.swift
 //  Dillon_Murphy
 //
-//  Created by Dillon Murphy on 2/10/21.
+//  Created by Dillon Murphy on 2/16/21.
 //
 
 import Foundation
 import SwiftUI
 import SwiftUIRefresh
 
-struct ContentView: View {
+/// Car List View.
+///
+/// - Properties
+///     -  searchBar: The `SearchBar` to display in the `List`.
+///     -  fetch: The `FetchCars` object that is observing for changes to the car list, loading status, and any errors.
+///     -  flag: Boolean value to toggle the 'Loading Cars...' animation.
+///     -  isShowing: Boolean value representing whether the `UIRefreshControl` is visible.
+///     -  sort: Integer value representing the sorting option currently selected.
+///     -  carList: Array of `Car` sorted according to `sort`.
+///
+struct CarListView: View {
     
+    /// The `SearchBar` to display in the `List`.
     @ObservedObject var searchBar: SearchBar = SearchBar()
     
+    /// The `FetchCars` object that is observing for changes to the car list, loading status, and any errors.
     @ObservedObject var fetch = FetchCars()
     
+    /// Boolean value to toggle the 'Loading Cars...' animation.
     @State private var flag = false
     
+    /// Boolean value representing whether the `UIRefreshControl` is visible.
     @State private var isShowing = false
     
+    /// Integer value representing the sorting option currently selected.
     @State private var sort: Int = 0
     
+    /// Array of `Car` sorted according to sorted according to  the sorting option currently selected.
     var carList : [Car] {
         switch sort {
         case 1: return fetch.cars.sorted { $0.makeModel > $1.makeModel }
@@ -48,8 +64,9 @@ struct ContentView: View {
             NavigationView {
                 if let error = fetch.error {
                     // MARK: - Handling Error State
-                    ErrorAlertView(error: error, contentView: self)
+                    ErrorAlertView(error: error, carListView: self)
                 } else {
+                    //Check if carList is empty
                     if carList.count > 0 {
                         // MARK: - Handling Success State
                         List(carList.filter {
@@ -97,18 +114,18 @@ struct ContentView: View {
                         }
                     } else {
                         // MARK: - Handling Empty State
-                        EmptyView(contentView: self)
+                        EmptyView(carListView: self)
                     }
                 }
             }
-            //Removes UISplitViewController style to retain the UI state.
+            //Removes UISplitViewController style to retain the UI state on screen rotation.
             .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CarListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CarListView()
     }
 }

@@ -84,7 +84,7 @@ struct VehicleInfoView: View {
             if let origin = car.origin, let mpg = car.mpg {
                 HStack(alignment: .center, spacing: 0) {
                     VStack(alignment: .leading) {
-                        Text("Origin:").alignmentGuide(.leading) { d in d[.trailing] }.padding([.leading], 5)
+                        Text("Country of Origin:").alignmentGuide(.leading) { d in d[.trailing] }.padding([.leading], 5)
                     }
                     Spacer()
                     Text(origin).padding([.trailing], 5)
@@ -100,7 +100,7 @@ struct VehicleInfoView: View {
             } else if let origin = car.origin {
                 HStack(alignment: .center, spacing: 0) {
                     VStack(alignment: .leading) {
-                        Text("Origin:").alignmentGuide(.leading) { d in d[.trailing] }.padding([.leading], 5)
+                        Text("Country of Origin:").alignmentGuide(.leading) { d in d[.trailing] }.padding([.leading], 5)
                     }
                     Spacer()
                     Text(origin).padding([.trailing], 5)

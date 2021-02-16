@@ -57,7 +57,6 @@ class FetchCars: ObservableObject {
         
         //Initialize a URLSessionDataTask with the url and a completion handler to call when the data task completes
         dataTask = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            print("Fetching Cars")
             defer {
                 self.dataTask = nil
             }

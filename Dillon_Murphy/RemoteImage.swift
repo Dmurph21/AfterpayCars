@@ -79,9 +79,6 @@ struct RemoteImage: View {
     var body: some View {
         selectImage()
             .resizable()
-            .frame(width: 160.0, height: 120.0)
-            .aspectRatio(contentMode: .fill)
-            .border(Color.black)
     }
     
    //MARK: Initialization
