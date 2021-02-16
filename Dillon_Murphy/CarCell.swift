@@ -53,7 +53,6 @@ struct CarCell: View {
 ///
 /// - Properties
 ///     -  car: The `Car` to display in the `CarInfoView`.
-///     -  textSize: CGFloat value representing the size of the font.
 ///
 struct CarInfoView: View {
     

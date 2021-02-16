@@ -19,8 +19,8 @@ struct EmptyView: View {
     var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: -25) {
             Text("No Cars Found!")
+                .font(Font.custom("Menlo", size: 35))
                 .fontWeight(.bold)
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .padding()
                 .foregroundColor(Color.init(white: 0.5, opacity: 1))
                 .multilineTextAlignment(.center)
@@ -37,8 +37,11 @@ struct EmptyView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
+                    /// Set `FetchCars.endpointType` to `.normal` to simulate the page reloading without an empty Array of `Car`.
                     self.carListView.fetch.endpointType = .normal
-                    //self.carListView.fetch.forceFetch()
+                    
+                    /// Refresh Car List.
+                    self.carListView.fetch.forceFetch()
                 }) {
                     Image(systemName: "arrow.counterclockwise")
                 }

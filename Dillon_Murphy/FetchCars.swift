@@ -26,11 +26,11 @@ class FetchCars: ObservableObject {
     /// Debug value. If true it adds a 2 second delay when data task completes to allow the loading animation to play.
     let testLoading: Bool = false
     
-    @Published var endpointType: EndpointType = .normal/* {
-        didSet {
-            fetchCarList(endpointType.url)
-        }
-    }*/
+    /// Endpoint to pull the list of cars from.
+    ///
+    /// - Important: You must set this to the endpoint type you would like to pull data from.
+    ///
+    var endpointType: EndpointType = .normal
      
     //MARK: Initialization
     init() {

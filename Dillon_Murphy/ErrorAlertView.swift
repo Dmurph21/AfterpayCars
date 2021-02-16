@@ -23,10 +23,11 @@ struct ErrorAlertView: View {
     var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: -25) {
             Text("ERROR:")
+                .font(Font.custom("Menlo", size: 35))
                 .fontWeight(.bold)
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .padding()
             Text(error.localizedDescription)
+                .font(Font.custom("Menlo", size: 20))
                 .multilineTextAlignment(.center)
                 .padding()
         }
@@ -45,13 +46,20 @@ struct ErrorAlertView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    //self.carListView.fetch.endpointType = .normal
+                    /// Set `FetchCars.error` to `nil` to simulate the page reloading without an error.
+                    self.carListView.fetch.error = nil
+                    
+                    /// Set `FetchCars.endpointType` to `.normal` to simulate the page reloading without an empty Array of `Car`.
+                    self.carListView.fetch.endpointType = .normal
+                    
+                    /// Refresh Car List.
                     self.carListView.fetch.forceFetch()
                 }) {
                     Image(systemName: "arrow.counterclockwise")
                 }
             }
         }
+        .padding()
     }
     
 }
