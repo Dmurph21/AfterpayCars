@@ -9,18 +9,35 @@ import XCTest
 @testable import Dillon_Murphy
 
 class Dillon_MurphyTests: XCTestCase {
+    
+    var sut: ContentView!
+    var carList: [Car] = [Car]()
 
     override func setUpWithError() throws {
+        super.setUp()
+        sut = ContentView()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
+        sut = nil
+        carList = [Car]()
+        super.tearDown()
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCarsNotEmpty() throws {
+        let promise = expectation(description: "Status code: 200")
+        carList = sut.fetch.cars
+        let carsEmpty = carList.count > 0
+        if carsEmpty {
+            promise.fulfill()
+        } else {
+            
+        }
+        //wait(for: [promise], timeout: 15)
+        //print("Cars Empty: \(carsEmpty)")
+        //XCTAssertTrue(true, "Cars list is empty.")
     }
 
     func testPerformanceExample() throws {
