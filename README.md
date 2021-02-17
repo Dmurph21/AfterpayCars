@@ -9,13 +9,16 @@
     - Since this was meant to be a single-screen app to load car data from the network, I focused on all the things you could do on a single screen with the given car data: 
         - Adding a NavigationView with the app logo.
         - Adding a MenuPicker to the NavigationView that sorts the cars based on the Make/Model, Price, Or Year.
-        - Adding a SearchBar to the List that searchs the cars based on the Make, Model, Body, Or Year.
+        - Adding a SearchBar to the List that filters the car's list based on the Make, Model, Body, Or Year.
+        - Adding a UIRefreshControl to the List in order to allow you to reload the data.
+        - Adding a loading animation while waiting for the URLSessionDataTask to complete.
+        - Adding additional car data (Body type, Engine configuration, MPG) to the car data item. 
+        - 
 
-- Architecture (MVVM)
-    - I used the MVVM design pattern.
-        - Car functions as the Model.
-        - CarListView function as the View.
-        - FetchCars functions as the ViewModel.
+- Architecture (MVVM design pattern)
+    - Car functions as the Model.
+    - CarListView function as the View.
+    - FetchCars functions as the ViewModel.
 
 ## Other Areas:
 
@@ -30,5 +33,6 @@ var endpointType: EndpointType = .normal
 ```Swift
 let testLoading: Bool = true
 ```
+
 
 

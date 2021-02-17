@@ -93,7 +93,6 @@ extension View {
 ///
 /// - Returns: A `CarCellRow` View.
 ///
-///
 @ViewBuilder func CarCellRow(title: String, value: String, shade: Bool) -> some View {
     HStack(alignment: .center, spacing: 0) {
         VStack(alignment: .leading) {
