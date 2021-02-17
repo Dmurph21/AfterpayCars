@@ -11,15 +11,25 @@ import XCTest
 class Dillon_MurphyTests: XCTestCase {
     
     var sut: Car!
+    var sut2: CarListView!
 
     override func setUpWithError() throws {
         super.setUp()
         sut = Car(make: Make(manufacturer: "Honda", model: "Civic"), color: "Red", year: 2019, configuration: Configuration(body: "Saloon", cylinders: 4, horsepower: 130), origin: "Japan", mpg: 19, image: "images/honda_civic_1.jpg", price: 17500)
+        sut2 = CarListView()
+        sut2.fetch.forceFetch()
     }
 
     override func tearDownWithError() throws {
         sut = nil
+        sut2 = nil
         super.tearDown()
+    }
+    
+    func testCarListViewHasCars() {
+        if let firstCar = sut2.carList.first {
+            XCTAssertEqual(firstCar.makeModel, "Audi A5", "CarListView has no cars")
+        }
     }
     
     func testMakeModelIsComputedProperly() {
