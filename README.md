@@ -40,5 +40,3 @@ var endpointType: EndpointType = .normal
 ```Swift
 let testLoading: Bool = true
 ```
-
-
