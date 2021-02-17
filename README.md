@@ -16,7 +16,7 @@
         - Adding a SearchBar to the List that filters the car's list based on the Make, Model, Body, Or Year.
         - Adding a UIRefreshControl to the List in order to allow you to reload the data.
         - Adding a loading animation while waiting for the URLSessionDataTask to complete.
-        - Adding additional car data (Body type, Engine configuration, MPG) to the car data item. 
+        - Adding additional car data (body type, engine configuration, MPG) to the car data item. 
         - Adding a placeholder view when there the cars list is empty.
         - Adding a placeholder view when retrieving the cars list returns an error.
         - Adding a placeholder view when retrieving the car's image from url.
