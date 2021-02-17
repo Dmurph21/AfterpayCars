@@ -27,7 +27,6 @@ class Dillon_MurphyTests: XCTestCase {
     }
     
     func testCarListViewHasCars() {
-        
         if let firstCar = sut2.carList.first {
             XCTAssertEqual(firstCar.makeModel, "Audi A5", "CarListView has no cars")
         }
