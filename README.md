@@ -41,3 +41,4 @@ var endpointType: EndpointType = .normal
 let testLoading: Bool = true
 ```
 
+

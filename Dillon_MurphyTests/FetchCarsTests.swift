@@ -15,13 +15,11 @@ class FetchCarsTests: XCTestCase {
     override func setUpWithError() throws {
         super.setUp()
         sut = URLSession(configuration: .default)
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
         sut = nil
         super.tearDown()
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
     // Asynchronous test: success fast, failure slow
@@ -68,9 +66,6 @@ class FetchCarsTests: XCTestCase {
                     } else {
                         XCTFail("Cars list is empty.")
                     }
-                    /*DispatchQueue.main.async {
-                        cars = decodedData
-                    }*/
                 } else {
                     XCTFail("No data.")
                 }
@@ -101,9 +96,6 @@ class FetchCarsTests: XCTestCase {
                     } else {
                         XCTFail("Cars list is not empty.")
                     }
-                    /*DispatchQueue.main.async {
-                        cars = decodedData
-                    }*/
                 } else {
                     XCTFail("No data.")
                 }
@@ -146,10 +138,35 @@ class FetchCarsTests: XCTestCase {
         wait(for: [promise], timeout: 5)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
+    func testPerformanceCarsNotEmpty() throws {
         self.measure {
-            // Put the code you want to measure the time of here.
+            // given
+            let url = URL(string: "https://afterpay-mobile-interview.s3.amazonaws.com/cars.json")
+            // 1
+            let promise = expectation(description: "Cars list is not empty.")
+            // when
+            let dataTask = sut.dataTask(with: url!) { data, response, error in
+              // then
+                do {
+                    if let carData = data {
+                        // 3.
+                        let carList = try JSONDecoder().decode([Car].self, from: carData)
+                        let carsEmpty = carList.count > 0
+                        if carsEmpty {
+                            promise.fulfill()
+                        } else {
+                            XCTFail("Cars list is empty.")
+                        }
+                    } else {
+                        XCTFail("No data.")
+                    }
+                } catch {
+                    XCTFail("Error: \(error.localizedDescription)")
+                }
+            }
+            dataTask.resume()
+            // 3
+            wait(for: [promise], timeout: 5)
         }
     }
 

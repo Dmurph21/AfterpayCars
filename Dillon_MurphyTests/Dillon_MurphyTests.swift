@@ -10,41 +10,40 @@ import XCTest
 
 class Dillon_MurphyTests: XCTestCase {
     
-    var sut: CarListView!
-    var carList: [Car] = [Car]()
+    var sut: Car!
 
     override func setUpWithError() throws {
         super.setUp()
-        sut = CarListView()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = Car(make: Make(manufacturer: "Honda", model: "Civic"), color: "Red", year: 2019, configuration: Configuration(body: "Saloon", cylinders: 4, horsepower: 130), origin: "Japan", mpg: 19, image: "images/honda_civic_1.jpg", price: 17500)
     }
 
     override func tearDownWithError() throws {
         sut = nil
-        carList = [Car]()
         super.tearDown()
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testCarsNotEmpty() throws {
-        let promise = expectation(description: "Status code: 200")
-        carList = sut.fetch.cars
-        let carsEmpty = carList.count > 0
-        if carsEmpty {
-            promise.fulfill()
-        } else {
-            
-        }
-        //wait(for: [promise], timeout: 15)
-        //print("Cars Empty: \(carsEmpty)")
-        //XCTAssertTrue(true, "Cars list is empty.")
+    
+    func testMakeModelIsComputedProperly() {
+      XCTAssertEqual(sut.makeModel, "Honda Civic", "makeModel computed from the make.manufacturer and make.model is wrong")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testYearMakeModelIsComputedProperly() {
+      XCTAssertEqual(sut.yearMakeModel, "2019 Honda Civic", "yearMakeModel computed from the year, make.manufacturer, and make.model is wrong")
+    }
+    
+    func testSearchStringIsComputedProperly() {
+      XCTAssertEqual(sut.searchString, "2019 Honda Civic Saloon", "searchString computed from year, make.manufacturer, make.model, and configuration.body is wrong")
+    }
+    
+    func testYearStringIsComputedProperly() {
+      XCTAssertEqual(sut.yearString, "2019", "yearString computed from year is wrong")
+    }
+    
+    func testImageStringIsComputedProperly() {
+      XCTAssertEqual(sut.imageString, "https://afterpay-mobile-interview.s3.amazonaws.com/images/honda_civic_1.jpg", "imageString computed from relative path is wrong")
+    }
+    
+    func testEngineStringIsComputedProperly() {
+      XCTAssertEqual(sut.engineString, "4 Cyl 130HP", "engineString computed from the engine configuration is wrong")
     }
 
 }
