@@ -31,10 +31,10 @@ struct CarListView: View {
     @State private var flag = false
     
     /// Boolean value representing whether the `UIRefreshControl` is visible.
-    @State private var isShowing = false
+    @State var isShowing = false
     
     /// Integer value representing the sorting option currently selected.
-    @State private var sort: Int = 0
+    @State var sort: Int = 0
     
     /// Array of `Car` sorted according to sorted according to the sorting option currently selected.
     var carList : [Car] {
@@ -69,51 +69,7 @@ struct CarListView: View {
                     //Check if carList is empty
                     if carList.count > 0 {
                         // MARK: - Handling Success State
-                        List(carList.filter {
-                            searchBar.text.isEmpty || $0.searchString.localizedStandardContains(searchBar.text)
-                        }, id: \.self) { car in
-                            CarCell(car: car)
-                            // Adding Car Detail View as Destination View
-                            // Edited out to keep app single-screen
-                            /*NavigationLink(destination: CarView(car: car)) {
-                                CarCell(car: car)
-                            }*/
-                        }
-                        .pullToRefresh(isShowing: $isShowing) {
-                             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                self.isShowing = false
-                                self.fetch.forceFetch()
-                             }
-                        }
-                        .onChange(of: self.isShowing) { value in }
-                        .padding([.leading,.trailing], -15.0)
-                        .navigationTitle("Cars")
-                        .add(self.searchBar)
-                        .ignoresSafeArea()
-                        .navigationBarHidden(false)
-                        .navigationBarTitleDisplayMode(.inline)
-                        .toolbar {
-                            ToolbarItem(placement: .principal) {
-                                VStack {
-                                    Image("AfterpayCar")
-                                }
-                            }
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                Menu {
-                                    Picker("Sorting Options", selection: $sort) {
-                                        Text("Make/Model A → Z").tag(0)
-                                        Text("Make/Model Z → A").tag(1)
-                                        Text("Year ↓").tag(2)
-                                        Text("Year ↑").tag(3)
-                                        Text("Price ↓").tag(4)
-                                        Text("Price ↑").tag(5)
-                                    }
-                                }
-                                label: {
-                                    Label("Sort", systemImage: "arrow.up.arrow.down")
-                                }
-                            }
-                        }
+                        CarsView(carListView: self)
                     } else {
                         // MARK: - Handling Empty State
                         EmptyView(carListView: self)

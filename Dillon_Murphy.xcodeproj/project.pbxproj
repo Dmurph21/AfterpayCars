@@ -14,30 +14,22 @@
 		3D6CF8DB25DB867C00877E47 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CF8DA25DB867C00877E47 /* EmptyView.swift */; };
 		3D77744C25DB63AC0095A681 /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D77744B25DB63AC0095A681 /* ErrorAlertView.swift */; };
 		3DB9B84025DC5D9C0017239D /* CarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB9B83F25DC5D9C0017239D /* CarListView.swift */; };
+		3DB9B99725DCE6F60017239D /* CarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB9B99625DCE6F60017239D /* CarsView.swift */; };
 		3DD3B17E25D4BB8100EEBEDD /* Dillon_MurphyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B17D25D4BB8100EEBEDD /* Dillon_MurphyApp.swift */; };
 		3DD3B18225D4BB8100EEBEDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD3B18125D4BB8100EEBEDD /* Assets.xcassets */; };
 		3DD3B18525D4BB8100EEBEDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD3B18425D4BB8100EEBEDD /* Preview Assets.xcassets */; };
 		3DD3B19025D4BB8100EEBEDD /* Dillon_MurphyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B18F25D4BB8100EEBEDD /* Dillon_MurphyTests.swift */; };
-		3DD3B19B25D4BB8100EEBEDD /* Dillon_MurphyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B19A25D4BB8100EEBEDD /* Dillon_MurphyUITests.swift */; };
 		3DD3B1AC25D4BBCA00EEBEDD /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B1AB25D4BBCA00EEBEDD /* Car.swift */; };
 		3DD3B1B925D4BF8F00EEBEDD /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B1B825D4BF8F00EEBEDD /* RemoteImage.swift */; };
 		3DD3B1C625D4C4AE00EEBEDD /* FetchCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B1C525D4C4AE00EEBEDD /* FetchCars.swift */; };
 		3DD3B1E525D5A43A00EEBEDD /* FetchCarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B1E425D5A43A00EEBEDD /* FetchCarsTests.swift */; };
 		3DD3B1F725D5B0D400EEBEDD /* WaveText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B1F625D5B0D400EEBEDD /* WaveText.swift */; };
 		3DD3B20525D5C9B200EEBEDD /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3B20425D5C9B200EEBEDD /* CarView.swift */; };
-		911B7031FBDF167CC08E068A /* Pods_Dillon_Murphy_Dillon_MurphyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F9888BC291C973B5BEC508 /* Pods_Dillon_Murphy_Dillon_MurphyUITests.framework */; };
 		B5CB9CBF8F70FA488B51F41E /* Pods_Dillon_Murphy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7C090BE21BC3CD2B290D48 /* Pods_Dillon_Murphy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		3DD3B18C25D4BB8100EEBEDD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3DD3B17225D4BB8100EEBEDD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3DD3B17925D4BB8100EEBEDD;
-			remoteInfo = Dillon_Murphy;
-		};
-		3DD3B19725D4BB8100EEBEDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3DD3B17225D4BB8100EEBEDD /* Project object */;
 			proxyType = 1;
@@ -55,6 +47,7 @@
 		3D6CF8DA25DB867C00877E47 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		3D77744B25DB63AC0095A681 /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
 		3DB9B83F25DC5D9C0017239D /* CarListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListView.swift; sourceTree = "<group>"; };
+		3DB9B99625DCE6F60017239D /* CarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsView.swift; sourceTree = "<group>"; };
 		3DD3B17A25D4BB8100EEBEDD /* Dillon_Murphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dillon_Murphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD3B17D25D4BB8100EEBEDD /* Dillon_MurphyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dillon_MurphyApp.swift; sourceTree = "<group>"; };
 		3DD3B18125D4BB8100EEBEDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,9 +56,6 @@
 		3DD3B18B25D4BB8100EEBEDD /* Dillon_MurphyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dillon_MurphyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD3B18F25D4BB8100EEBEDD /* Dillon_MurphyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dillon_MurphyTests.swift; sourceTree = "<group>"; };
 		3DD3B19125D4BB8100EEBEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DD3B19625D4BB8100EEBEDD /* Dillon_MurphyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dillon_MurphyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DD3B19A25D4BB8100EEBEDD /* Dillon_MurphyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dillon_MurphyUITests.swift; sourceTree = "<group>"; };
-		3DD3B19C25D4BB8100EEBEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DD3B1AB25D4BBCA00EEBEDD /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		3DD3B1B825D4BF8F00EEBEDD /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		3DD3B1C525D4C4AE00EEBEDD /* FetchCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCars.swift; sourceTree = "<group>"; };
@@ -98,14 +88,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3DD3B19325D4BB8100EEBEDD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				911B7031FBDF167CC08E068A /* Pods_Dillon_Murphy_Dillon_MurphyUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,12 +100,42 @@
 			path = SearchBar;
 			sourceTree = "<group>";
 		};
+		3DB9B99A25DCE7950017239D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DB9B83F25DC5D9C0017239D /* CarListView.swift */,
+				3DB9B99625DCE6F60017239D /* CarsView.swift */,
+				3D6CF8D525DB85E600877E47 /* CarCell.swift */,
+				3D6CF8DA25DB867C00877E47 /* EmptyView.swift */,
+				3D77744B25DB63AC0095A681 /* ErrorAlertView.swift */,
+				3DD3B20425D5C9B200EEBEDD /* CarView.swift */,
+				3DD3B1B825D4BF8F00EEBEDD /* RemoteImage.swift */,
+				3DD3B1F625D5B0D400EEBEDD /* WaveText.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3DB9B9A325DCE7FA0017239D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3DD3B1AB25D4BBCA00EEBEDD /* Car.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3DB9B9A625DCE83D0017239D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3DD3B1C525D4C4AE00EEBEDD /* FetchCars.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		3DD3B17125D4BB8100EEBEDD = {
 			isa = PBXGroup;
 			children = (
 				3DD3B17C25D4BB8100EEBEDD /* Dillon_Murphy */,
 				3DD3B18E25D4BB8100EEBEDD /* Dillon_MurphyTests */,
-				3DD3B19925D4BB8100EEBEDD /* Dillon_MurphyUITests */,
 				3DD3B17B25D4BB8100EEBEDD /* Products */,
 				A57CEB9A14747B1587BC062F /* Pods */,
 				F2166F98126C1BE13E2EE3C7 /* Frameworks */,
@@ -135,7 +147,6 @@
 			children = (
 				3DD3B17A25D4BB8100EEBEDD /* Dillon_Murphy.app */,
 				3DD3B18B25D4BB8100EEBEDD /* Dillon_MurphyTests.xctest */,
-				3DD3B19625D4BB8100EEBEDD /* Dillon_MurphyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,15 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				3DD3B17D25D4BB8100EEBEDD /* Dillon_MurphyApp.swift */,
-				3DB9B83F25DC5D9C0017239D /* CarListView.swift */,
-				3DD3B1AB25D4BBCA00EEBEDD /* Car.swift */,
-				3D6CF8D525DB85E600877E47 /* CarCell.swift */,
-				3D6CF8DA25DB867C00877E47 /* EmptyView.swift */,
-				3D77744B25DB63AC0095A681 /* ErrorAlertView.swift */,
-				3DD3B1C525D4C4AE00EEBEDD /* FetchCars.swift */,
-				3DD3B1B825D4BF8F00EEBEDD /* RemoteImage.swift */,
-				3DD3B20425D5C9B200EEBEDD /* CarView.swift */,
-				3DD3B1F625D5B0D400EEBEDD /* WaveText.swift */,
+				3DB9B9A325DCE7FA0017239D /* Models */,
+				3DB9B99A25DCE7950017239D /* Views */,
+				3DB9B9A625DCE83D0017239D /* ViewModels */,
 				3D6CF8C225DB806200877E47 /* SearchBar */,
 				3DD3B18125D4BB8100EEBEDD /* Assets.xcassets */,
 				3DD3B18625D4BB8100EEBEDD /* Info.plist */,
@@ -177,15 +182,6 @@
 				3DD3B19125D4BB8100EEBEDD /* Info.plist */,
 			);
 			path = Dillon_MurphyTests;
-			sourceTree = "<group>";
-		};
-		3DD3B19925D4BB8100EEBEDD /* Dillon_MurphyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3DD3B19A25D4BB8100EEBEDD /* Dillon_MurphyUITests.swift */,
-				3DD3B19C25D4BB8100EEBEDD /* Info.plist */,
-			);
-			path = Dillon_MurphyUITests;
 			sourceTree = "<group>";
 		};
 		A57CEB9A14747B1587BC062F /* Pods */ = {
@@ -252,26 +248,6 @@
 			productReference = 3DD3B18B25D4BB8100EEBEDD /* Dillon_MurphyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3DD3B19525D4BB8100EEBEDD /* Dillon_MurphyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3DD3B1A525D4BB8100EEBEDD /* Build configuration list for PBXNativeTarget "Dillon_MurphyUITests" */;
-			buildPhases = (
-				380E71C5E5232BBF2BECE2F4 /* [CP] Check Pods Manifest.lock */,
-				3DD3B19225D4BB8100EEBEDD /* Sources */,
-				3DD3B19325D4BB8100EEBEDD /* Frameworks */,
-				3DD3B19425D4BB8100EEBEDD /* Resources */,
-				31DAE395A031434B181BCD69 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3DD3B19825D4BB8100EEBEDD /* PBXTargetDependency */,
-			);
-			name = Dillon_MurphyUITests;
-			productName = Dillon_MurphyUITests;
-			productReference = 3DD3B19625D4BB8100EEBEDD /* Dillon_MurphyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -285,10 +261,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					3DD3B18A25D4BB8100EEBEDD = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 3DD3B17925D4BB8100EEBEDD;
-					};
-					3DD3B19525D4BB8100EEBEDD = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 3DD3B17925D4BB8100EEBEDD;
 					};
@@ -309,7 +281,6 @@
 			targets = (
 				3DD3B17925D4BB8100EEBEDD /* Dillon_Murphy */,
 				3DD3B18A25D4BB8100EEBEDD /* Dillon_MurphyTests */,
-				3DD3B19525D4BB8100EEBEDD /* Dillon_MurphyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,55 +302,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3DD3B19425D4BB8100EEBEDD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		31DAE395A031434B181BCD69 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dillon_Murphy-Dillon_MurphyUITests/Pods-Dillon_Murphy-Dillon_MurphyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dillon_Murphy-Dillon_MurphyUITests/Pods-Dillon_Murphy-Dillon_MurphyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dillon_Murphy-Dillon_MurphyUITests/Pods-Dillon_Murphy-Dillon_MurphyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		380E71C5E5232BBF2BECE2F4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Dillon_Murphy-Dillon_MurphyUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7A35A143FE2BBD9D9BDEB924 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,6 +385,7 @@
 				3DD3B1AC25D4BBCA00EEBEDD /* Car.swift in Sources */,
 				3D6CF8C625DB806200877E47 /* SearchBar.swift in Sources */,
 				3DD3B1B925D4BF8F00EEBEDD /* RemoteImage.swift in Sources */,
+				3DB9B99725DCE6F60017239D /* CarsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,14 +398,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3DD3B19225D4BB8100EEBEDD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DD3B19B25D4BB8100EEBEDD /* Dillon_MurphyUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -487,11 +405,6 @@
 			isa = PBXTargetDependency;
 			target = 3DD3B17925D4BB8100EEBEDD /* Dillon_Murphy */;
 			targetProxy = 3DD3B18C25D4BB8100EEBEDD /* PBXContainerItemProxy */;
-		};
-		3DD3B19825D4BB8100EEBEDD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3DD3B17925D4BB8100EEBEDD /* Dillon_Murphy */;
-			targetProxy = 3DD3B19725D4BB8100EEBEDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -704,48 +617,6 @@
 			};
 			name = Release;
 		};
-		3DD3B1A625D4BB8100EEBEDD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE0BD94E2045F36165DA5439 /* Pods-Dillon_Murphy-Dillon_MurphyUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HT47WPUGHM;
-				INFOPLIST_FILE = Dillon_MurphyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Dillon.Dillon-MurphyUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Dillon_Murphy;
-			};
-			name = Debug;
-		};
-		3DD3B1A725D4BB8100EEBEDD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C897A5743663B313AD45A404 /* Pods-Dillon_Murphy-Dillon_MurphyUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HT47WPUGHM;
-				INFOPLIST_FILE = Dillon_MurphyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Dillon.Dillon-MurphyUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Dillon_Murphy;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -772,15 +643,6 @@
 			buildConfigurations = (
 				3DD3B1A325D4BB8100EEBEDD /* Debug */,
 				3DD3B1A425D4BB8100EEBEDD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3DD3B1A525D4BB8100EEBEDD /* Build configuration list for PBXNativeTarget "Dillon_MurphyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3DD3B1A625D4BB8100EEBEDD /* Debug */,
-				3DD3B1A725D4BB8100EEBEDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -126,9 +126,3 @@ struct Configuration: Codable, Hashable {
     /// The horsepower of the car's engine.
     let horsepower: Int?
 }
-
-/*extension Car: Identifiable {
-    
-    /// Conforms Car to the Identifiable protocol
-    var id: UUID { return UUID() }
-}*/

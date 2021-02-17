@@ -83,7 +83,6 @@ extension View {
     }
 }
 
-
 /// Creates and returns  a `CarCellRow` View.
 ///
 /// - Parameters:
