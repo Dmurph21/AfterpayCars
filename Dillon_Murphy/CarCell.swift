@@ -59,97 +59,58 @@ struct CarInfoView: View {
     var car: Car
     
     var body: some View {
-        VStack(spacing: 0){
-            HStack(alignment: .center, spacing: 0) {
-                VStack(alignment: .leading) {
-                    Text("Price:")
-                        .alignmentGuide(.leading) { d in d[.trailing] }
-                        .padding([.leading], 5)
-                        .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-                }
-                Spacer()
-                Text("$\(car.price)")
-                    .padding([.trailing], 5)
-                    .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-            }.background(Color.init(white: 0.9, opacity: 0.8))
-            HStack(alignment: .center, spacing: 0) {
-                VStack(alignment: .leading) {
-                    Text("Body:")
-                        .alignmentGuide(.leading) { d in d[.trailing] }
-                        .padding([.leading], 5)
-                        .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-                }
-                Spacer()
-                Text("\(car.configuration.body)")
-                    .padding([.trailing], 5)
-                    .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
+        VStack(spacing: 2){
+            CarCellRow(title: "Price:", value: "$\(car.price)", shade: true)
+            CarCellRow(title: "Body:", value: "\(car.configuration.body)", shade: false)
+            if let engine = car.engineString {
+                CarCellRow(title: "Engine:", value: engine, shade: true)
             }
-            if let cylinders = car.configuration.cylinders, let horsepower = car.configuration.horsepower {
-                HStack(alignment: .center, spacing: 0) {
-                    VStack(alignment: .leading) {
-                        Text("Cylinders:")
-                            .alignmentGuide(.leading) { d in d[.trailing] }
-                            .padding([.leading], 5)
-                            .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-                    }
-                    Spacer()
-                    Text("\(cylinders)")
-                        .padding([.trailing], 5)
-                        .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-                }.background(Color.init(white: 0.9, opacity: 0.8))
-                HStack(alignment: .center, spacing: 0) {
-                    VStack(alignment: .leading) {
-                        Text("Horsepower:")
-                            .alignmentGuide(.leading) { d in d[.trailing] }
-                            .padding([.leading], 5)
-                            .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-                    }
-                    Spacer()
-                    Text("\(horsepower)")
-                        .padding([.trailing], 5)
-                        .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-                }
-            } else if let cylinders = car.configuration.cylinders {
-                HStack(alignment: .center, spacing: 0) {
-                    VStack(alignment: .leading) {
-                        Text("Cylinders:")
-                            .alignmentGuide(.leading) { d in d[.trailing] }
-                            .padding([.leading], 5)
-                            .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-                    }
-                    Spacer()
-                    Text("\(cylinders)")
-                        .padding([.trailing], 5)
-                        .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-                }.background(Color.init(white: 0.9, opacity: 0.8))
-            } else if let horsepower = car.configuration.horsepower {
-                HStack(alignment: .center, spacing: 0) {
-                    VStack(alignment: .leading) {
-                        Text("Horsepower:")
-                            .alignmentGuide(.leading) { d in d[.trailing] }
-                            .padding([.leading], 5)
-                            .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-                    }
-                    Spacer()
-                    Text("\(horsepower)")
-                        .padding([.trailing], 5)
-                        .font(Font.custom("Menlo", size: 17))
-                        .frame(maxHeight: 20)
-                }.background(Color.init(white: 0.9, opacity: 0.8))
-            }
+            CarCellRow(title: "MPG:", value: "\(car.mpg ?? 0)", shade: false)
             Spacer()
         }
+    }
+}
+
+extension View {
+    @ViewBuilder
+    func `if`<Content: View>(_ condition: Bool, content: (Self) -> Content) -> some View {
+        if condition {
+            content(self)
+        }
+        else {
+            self
+        }
+    }
+}
+
+
+/// Creates and returns  a `CarCellRow` View.
+///
+/// - Parameters:
+///    - title: Row title String.
+///    - value: Row info String.
+///    - shade: Bool value indicating whether to shade the background.
+///
+/// - Returns: A `CarCellRow` View.
+///
+///
+@ViewBuilder func CarCellRow(title: String, value: String, shade: Bool) -> some View {
+    HStack(alignment: .center, spacing: 0) {
+        VStack(alignment: .leading) {
+            Text(title)
+                .alignmentGuide(.leading) { d in d[.trailing] }
+                .padding([.leading], 5)
+                .font(Font.custom("Menlo", size: 17))
+                .frame(maxHeight: 20)
+        }
+        Spacer()
+        Text(value)
+            .padding([.trailing], 5)
+            .font(Font.custom("Menlo", size: 17))
+            .frame(maxHeight: 20)
+    }
+    .if(shade) { view in
+        view.background(Color.init(white: 0.9, opacity: 0.8))
     }
 }
 

@@ -84,6 +84,23 @@ struct Car: Codable, Hashable {
         return "https://afterpay-mobile-interview.s3.amazonaws.com/\(image ?? "")"
     }
     
+    /// Retrieves optional String containing the car's engine configuration.
+    ///
+    /// Concatenates the relative path of the car's `configuration.cylinders` to the `configuration.horsepower`.
+    ///
+    /// - Returns: optional String containing the car's engine configuration.
+    ///
+    var engineString: String? {
+        if let cylinders = configuration.cylinders, let hp = configuration.horsepower {
+            return "\(cylinders) Cyl \(hp)HP"
+        } else if let cylinders = configuration.cylinders {
+            return "\(cylinders) Cyl"
+        } else if let hp = configuration.horsepower {
+            return "\(hp)HP"
+        }
+        return nil
+    }
+    
 }
 
 /// The make of the car.

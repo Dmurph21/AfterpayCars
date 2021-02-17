@@ -1,47 +1,34 @@
-# SwiftUI Search Bar in Navigation Bar
-🔍 SwiftUI search bar in the navigation bar.
+# Afterpay Cars
 
+<p align="center"><img src="https://github.com/Dmurph21/AfterpayCars/blob/main/AppIcon.png?raw=true" width="150"></p>
 
-<p align="center"><img src="SwiftUI_Search_Bar_in_Navigation_Bar/Documentation/SwiftUI_Search_Bar_in_Navigation_Bar@2x.png" width="900"></p>
+## Focused Areas:
 
-Complementary repository for article [**SwiftUI Search Bar in the Navigation Bar**]. For more details on motivations and implementation please refer to the full article, or lookup the basic usage example below otherwise.
+- UI
+    - This was my first SwiftUI app. I wanted to showcase how quickly I could pick up and adapt to a new way of designing an app. I also like to keep up to date on current development practices and take advantage of any opportunity to learn something new and improve as a developer. I particularly loved how easy it was to build the user interface with the declarative syntax of SwiftUI.
+    - Since this was meant to be a single-screen app to load car data from the network, I focused on all the things you could do on a single screen with the given car data: 
+        - Adding a NavigationView with the app logo.
+        - Adding a MenuPicker to the NavigationView that sorts the cars based on the Make/Model, Price, Or Year.
+        - Adding a SearchBar to the List that searchs the cars based on the Make, Model, Body, Or Year.
+
+- Architecture (MVVM)
+    - I used the MVVM design pattern.
+        - Car functions as the Model.
+        - CarListView function as the View.
+        - FetchCars functions as the ViewModel.
+
+## Other Areas:
+
+- For testing the different endpoints, you will need to set the 'endpointType' property in the 'FetchCars' class to the case you would like to test. The options are '.normal' for the plain cars list, '.empty' for the empty cars list, and '.error' to cause an error.
 
 ```Swift
-struct ContentView: View
-{
-    
-    var planets =
-        ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"] +
-        ["Ceres", "Pluto", "Haumea", "Makemake", "Eris"]
-    
-    @ObservedObject var searchBar: SearchBar = SearchBar()
-    
-    var body: some View {
-        NavigationView {
-            List {                
-                ForEach(
-                    planets.filter {
-                        searchBar.text.isEmpty ||
-                        $0.localizedStandardContains(searchBar.text)
-                    },
-                    id: \.self
-                ) { eachPlanet in
-                    Text(eachPlanet)
-                }
-            }
-                .navigationBarTitle("Planets")
-                .add(self.searchBar)
-        }
-    }
-}
+var endpointType: EndpointType = .normal
+```
+
+- You can set the 'testLoading' property in the 'FetchCars' class to 'true' and you will add a 2 second delay when data task completes to allow the 'Loading Cars...' animation to play.
+
+```Swift
+let testLoading: Bool = true
 ```
 
 
-## License
-
-> Licensed under the [**MIT License**](https://en.wikipedia.org/wiki/MIT_License).
-
-
-[**SwiftUI Search Bar in the Navigation Bar**]: http://blog.eppz.eu/swiftui-search-bar-in-the-navigation-bar
-[`SearchBar/SearchBar.swift`]: SwiftUI_Search_Bar_in_Navigation_Bar/SearchBar/SearchBar.swift
-[`ContentView.swift`]: SwiftUI_Search_Bar_in_Navigation_Bar/ContentView.swift

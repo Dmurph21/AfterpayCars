@@ -36,7 +36,7 @@ struct CarListView: View {
     /// Integer value representing the sorting option currently selected.
     @State private var sort: Int = 0
     
-    /// Array of `Car` sorted according to sorted according to  the sorting option currently selected.
+    /// Array of `Car` sorted according to sorted according to the sorting option currently selected.
     var carList : [Car] {
         switch sort {
         case 1: return fetch.cars.sorted { $0.makeModel > $1.makeModel }
@@ -72,10 +72,12 @@ struct CarListView: View {
                         List(carList.filter {
                             searchBar.text.isEmpty || $0.searchString.localizedStandardContains(searchBar.text)
                         }, id: \.self) { car in
+                            CarCell(car: car)
                             // Adding Car Detail View as Destination View
-                            //NavigationLink(destination: CarView(car: car)) {
+                            // Edited out to keep app single-screen
+                            /*NavigationLink(destination: CarView(car: car)) {
                                 CarCell(car: car)
-                            //}
+                            }*/
                         }
                         .pullToRefresh(isShowing: $isShowing) {
                              DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
